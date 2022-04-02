@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Button, { ButtonProps } from './Button';
+import Button, { ButtonProps } from '.';
 
 export default {
   component: Button,
@@ -13,4 +13,7 @@ const Template: ComponentStory<typeof Button> = function (args: ButtonProps) {
   return <Button {...args} />;
 };
 
-export const Primary = Template.bind({});
+export const Standard = Template.bind({});
+Standard.args = {
+  children: (<p>Button</p>),
+};
