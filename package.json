@@ -1,10 +1,10 @@
 {
-  "name": "vk-common",
+  "name": "vk-style",
   "version": "1.0.0",
   "description": "Common React components for ViaKunst",
   "author": "viakunst",
   "license": "Apache-2.0",
-  "repository": "viakunst/vk-common",
+  "repository": "viakunst/vk-style",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "types": "dist/index.d.ts",

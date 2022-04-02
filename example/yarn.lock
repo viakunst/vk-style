@@ -10610,7 +10610,7 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-"vk-common@link:..":
+"vk-style@link:..":
   version "0.0.0"
   uid ""
 
