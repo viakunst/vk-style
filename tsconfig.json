@@ -2,9 +2,14 @@
   "compilerOptions": {
     "outDir": "dist",
     "module": "esnext",
-    "lib": ["dom", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "moduleResolution": "node",
     "jsx": "react",
+    "strict": true,
     "sourceMap": true,
     "declaration": true,
     "esModuleInterop": true,
@@ -17,6 +22,11 @@
     "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src"],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx"
+  ],
   "exclude": ["node_modules", "dist", "example"]
 }

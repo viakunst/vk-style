@@ -1,23 +1,24 @@
 {
   "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "import",
+    "react",
+    "react-hooks",
+    "@typescript-eslint"
+  ],
   "extends": [
-    "standard",
-    "standard-react",
-    "plugin:prettier/recommended",
-    "prettier/standard",
-    "prettier/react",
-    "plugin:@typescript-eslint/eslint-recommended",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb",
+    "airbnb-typescript",
     "plugin:storybook/recommended"
   ],
   "env": {
     "node": true
   },
   "parserOptions": {
-    "ecmaVersion": 2020,
-    "ecmaFeatures": {
-      "legacyDecorators": true,
-      "jsx": true
-    }
+      "project": "./tsconfig.json"
   },
   "settings": {
     "react": {
@@ -25,11 +26,7 @@
     }
   },
   "rules": {
-    "space-before-function-paren": 0,
-    "react/prop-types": 0,
-    "react/jsx-handler-names": 0,
-    "react/jsx-fragments": 0,
-    "react/no-unused-prop-types": 0,
-    "import/export": 0
+    "react/jsx-one-expression-per-line": "off",
+    "linebreak-style": 0
   }
 }
