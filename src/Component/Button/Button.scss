@@ -1,9 +1,8 @@
-button {
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  border: 0;
-  border-radius: 3em;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 1;
+@use "../../Mixins/Button.scss" as Button;
+@use "../../Mixins/Palette.scss" as Palette;
+
+[type="submit"], [type="button"] {
+  @include Button.button;
+  background-color: Palette.$orange;
+  border-color: Palette.$orange;
 }

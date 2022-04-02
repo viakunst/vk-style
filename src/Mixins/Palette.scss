@@ -1,0 +1,23 @@
+$orange: #FFC164;
+$purple: #C472FF;
+$cyan: #80C8FF;
+$magenta: #FF5E91;
+$yellow: #FFF377;
+$green: #85FDBF;
+
+$white: #FFFFFF;
+$black: #000000;
+
+@function all_colors() {
+    @return map-merge(all_extra_colors(), ("orange": $orange));
+}
+
+@function all_extra_colors() {
+    @return (
+        "purple": $purple,
+        "cyan": $cyan,
+        "magenta": $magenta,
+        "yellow": $yellow,
+        "green": $green,
+    );
+}

@@ -1,0 +1,33 @@
+@use "Interaction.scss" as Interaction;
+@use "Palette.scss" as Palette;
+
+@mixin content-box($height: 1rem) {
+    display: inline-block;
+    border-radius: 2 * $height;
+    border-width: .25rem;
+    border-style: solid;
+    padding: $height - .25rem 1.125 * $height - .25rem;
+}
+
+@mixin button-normal($height: 1rem) {
+    @include content-box($height);
+    color: Palette.$black;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    line-height: 1em;
+}
+
+@mixin button-hover($height: 1rem) {
+    color: Palette.$black;
+    background-color: transparent;
+}
+
+@mixin button($height: 1rem) {
+    @include button-normal($height);
+
+    @include Interaction.hover {
+        @include button-hover($height);
+    }
+}
