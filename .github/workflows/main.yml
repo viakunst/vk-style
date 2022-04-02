@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: '0'
+      
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+      
+    - name: Install JS dependencies
+      run: yarn install
+    
+    - name: Build JS dependencies
+      run: yarn build
+
+    - name: Run linter
+      run: yarn lint:quiet
+
+    - name: Run tests
+      run: yarn test:coverage
+
+    - name: Run static code analyser
+      run: yarn analyse
+
+    - name: fix code coverage paths
+      working-directory: ./var/reports
+      run: |
+        sed -i 's/\/home\/runner\/work\/vk-style\/vk-style\//\/github\/workspace\//g' lcov.info
+
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
