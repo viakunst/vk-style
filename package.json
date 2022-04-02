@@ -17,7 +17,7 @@
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
     "test": "react-scripts test --env=jsdom",
-    "test:coverage": "cross-env CI=1 react-scripts test --env=jsdom",
+    "test:coverage": "cross-env CI=1 react-scripts test --env=jsdom --coverage",
     "lint": "run-s lint:js lint:css",
     "lint:quiet": "run-s lint:js:quiet lint:css:quiet",
     "lint:fix": "run-s lint:js:fix lint:css:fix",

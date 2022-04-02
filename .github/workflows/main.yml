@@ -42,7 +42,7 @@ jobs:
       run: yarn analyse
 
     - name: fix code coverage paths
-      working-directory: ./var/reports
+      working-directory: ./coverage
       run: |
         sed -i 's/\/home\/runner\/work\/vk-style\/vk-style\//\/github\/workspace\//g' lcov.info
 
