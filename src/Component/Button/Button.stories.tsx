@@ -1,0 +1,16 @@
+import React from 'react';
+
+import { ComponentStory, ComponentMeta } from '@storybook/react';
+
+import Button, { ButtonProps } from './Button';
+
+export default {
+  component: Button,
+} as ComponentMeta<typeof Button>;
+
+const Template: ComponentStory<typeof Button> = function (args: ButtonProps) {
+  // eslint-disable-next-line react/jsx-props-no-spreading
+  return <Button {...args} />;
+};
+
+export const Primary = Template.bind({});
