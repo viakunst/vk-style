@@ -1,23 +1,22 @@
-$orange: #FFC164;
-$purple: #C472FF;
-$cyan: #80C8FF;
-$magenta: #FF5E91;
-$yellow: #FFF377;
-$green: #85FDBF;
+$orange: #ffc164;
+$purple: #c472ff;
+$cyan: #80c8ff;
+$magenta: #ff5e91;
+$yellow: #fff377;
+$green: #85fdbf;
+$white: #fff;
+$black: #000;
 
-$white: #FFFFFF;
-$black: #000000;
-
-@function all_colors() {
-    @return map-merge(all_extra_colors(), ("orange": $orange));
+@function all-colors() {
+  @return map-merge(all-extra-colors(), ("orange": $orange));
 }
 
-@function all_extra_colors() {
-    @return (
-        "purple": $purple,
-        "cyan": $cyan,
-        "magenta": $magenta,
-        "yellow": $yellow,
-        "green": $green,
-    );
+@function all-extra-colors() {
+  @return (
+    "purple": $purple,
+    "cyan": $cyan,
+    "magenta": $magenta,
+    "yellow": $yellow,
+    "green": $green,
+  );
 }

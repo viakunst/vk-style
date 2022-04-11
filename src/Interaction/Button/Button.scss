@@ -1,8 +1,10 @@
 @use "../../Mixins/Button.scss" as Button;
 @use "../../Mixins/Palette.scss" as Palette;
 
-[type="submit"], [type="button"] {
+[type="submit"],
+[type="button"] {
   @include Button.button;
+
   background-color: Palette.$orange;
   border-color: Palette.$orange;
 }
