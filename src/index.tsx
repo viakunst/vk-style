@@ -1,13 +1,13 @@
 import './styles.module.scss';
 
-export * as Button from './Interaction/Button';
-export * as Clickable from './Interaction/Clickable';
+export { default as Button } from './Interaction/Button';
+export { default as Clickable } from './Interaction/Clickable';
 
-export * as Grid from './Layout/Grid';
+export { default as Grid } from './Layout/Grid';
 
-export * as Header from './Text/Header';
-export * as Note from './Text/Note';
-export * as Text from './Text/Text';
-export * as Title from './Text/Title';
+export { default as Header } from './Text/Header';
+export { default as Note } from './Text/Note';
+export { default as Text } from './Text/Text';
+export { default as Title } from './Text/Title';
 
-export * as Value from './Visualisation/Value';
+export { default as Value } from './Visualisation/Value';
